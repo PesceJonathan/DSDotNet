@@ -1,0 +1,40 @@
+﻿@model IEnumerable<DSJonathanPesce.Models.Produit>
+
+@{
+    ViewBag.Title = "Liste de Produit";
+}
+
+<h2>Liste de Produit</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LeNom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LeType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LePrix)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeNom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LePrix)
+            </td>
+        </tr>
+    }
+
+</table>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

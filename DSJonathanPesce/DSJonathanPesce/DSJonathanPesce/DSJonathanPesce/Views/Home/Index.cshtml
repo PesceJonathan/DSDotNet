@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "ProduitWorld";
+}
+
+@if (ViewBag.errorMessage != null)
+{
+    <p style="color:red">@ViewBag.errorMessage</p>
+}
+
+<h2>ProduitWorld</h2>
+<form method="get">
+    <select name="displayAction">
+        <option value="1">Affichage les produits dans l'ordre alphabétique</option>
+        <option value="2">Afficher les produits d'un type choisie par l'utilisateur</option>
+        <option value="3">Afficher les produits par prix décroissant</option>
+        <option value="4">Rechercher un produit à partir de son nom</option>
+    </select>
+    <p>Si vous avez choisie l'option 3, choisie une type: </p>
+    <select name="typeDeProduit">
+        <option value="1">Jeu</option>
+        <option value="2">Figurine</option>
+        <option value="3">Poster</option>
+    </select>
+    <p>Si vous avez choisie l'option 4, choisie le nom de votre produit: </p>
+    <input type="text" name="nomDeProduit" />
+    <br />
+    <button type="submit">Continue</button>
+</form>
